@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
-@RequestMapping("/calendario/tipodata")
+@RequestMapping("/tipodata")
 public class TipoDataController {
     @Autowired
     TipoDataService tipoDataService;
@@ -31,8 +31,8 @@ public class TipoDataController {
     }
 
     @PutMapping
-    public TipoData updateTipoData(@RequestBody TipoData jornadaTrabalho){
-        return tipoDataService.updateTipoData(jornadaTrabalho);
+    public TipoData updateTipoData(@RequestBody TipoData tipoData){
+        return tipoDataService.updateTipoData(tipoData);
     }
 
     @DeleteMapping("/{idTipoData}")
